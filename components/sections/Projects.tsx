@@ -1,5 +1,6 @@
 
 import Container from "@/components/layout/Container";
+import SectionHeading from "@/components/ui/SectionHeading";
 
 const projects = [
   {
@@ -26,20 +27,11 @@ export default function Projects() {
   return (
     <section className="bg-background-light py-20 sm:py-24">
       <Container>
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-medium uppercase tracking-wide text-primary">
-            Our Projects
-          </p>
-
-          <h2 className="mt-3 text-3xl font-bold tracking-tight text-text sm:text-4xl">
-            Solar Solutions in Action
-          </h2>
-
-          <p className="mt-4 text-base leading-7 text-muted sm:text-lg">
-            Explore examples of the types of solar solutions we provide for
-            homes and businesses.
-          </p>
-        </div>
+        <SectionHeading
+  eyebrow="Our Projects"
+  title="Solar Solutions in Action"
+  description="Explore examples of the types of solar solutions we provide for homes and businesses."
+/>
 
         <div className="mt-12 grid gap-8 md:grid-cols-3">
           {projects.map((project) => (
