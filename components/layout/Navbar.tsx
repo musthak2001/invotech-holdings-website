@@ -5,6 +5,20 @@ import Link from "next/link";
 import Container from "./Container";
 import NavLink from "./NavLink";
 
+type NavigationItem = {
+  name: string;
+  href: string;
+};
+
+const navigation: NavigationItem[] = [
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Services", href: "/services" },
+  { name: "Products", href: "/products" },
+  { name: "Projects", href: "/projects" },
+  { name: "Contact", href: "/contact" },
+];
+
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -19,19 +33,19 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden items-center gap-6 md:flex">
-            <NavLink href="/">Home</NavLink>
-            <NavLink href="/about">About</NavLink>
-            <NavLink href="/services">Services</NavLink>
-            <NavLink href="/products">Products</NavLink>
-            <NavLink href="/projects">Projects</NavLink>
-            <NavLink href="/contact">Contact</NavLink>
-        </div>
+            {navigation.map((item) => (
+              <NavLink key={item.href} href={item.href}>
+                {item.name}
+              </NavLink>
+            ))}
+          </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile Menu Button */}
           <button
             type="button"
             className="rounded-md p-2 md:hidden"
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isMenuOpen}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? "✕" : "☰"}
@@ -42,24 +56,16 @@ export default function Navbar() {
         {isMenuOpen && (
           <div className="border-t border-border py-4 md:hidden">
             <div className="flex flex-col gap-4">
-              <Link href="/" onClick={() => setIsMenuOpen(false)}>
-                Home
-              </Link>
-              <Link href="/about" onClick={() => setIsMenuOpen(false)}>
-                About
-              </Link>
-              <Link href="/services" onClick={() => setIsMenuOpen(false)}>
-                Services
-              </Link>
-              <Link href="/products" onClick={() => setIsMenuOpen(false)}>
-                Products
-              </Link>
-              <Link href="/projects" onClick={() => setIsMenuOpen(false)}>
-               Projects
-              </Link>
-              <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
-                Contact
-              </Link>
+              {navigation.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="text-sm font-medium text-muted transition-colors hover:text-primary"
+                >
+                  {item.name}
+                </Link>
+              ))}
             </div>
           </div>
         )}
