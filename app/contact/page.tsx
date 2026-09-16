@@ -1,6 +1,32 @@
+"use client";
+
+import { useState } from "react";
 import Container from "@/components/layout/Container";
 
 export default function ContactPage() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    const formData = new FormData(event.currentTarget);
+
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const phone = formData.get("phone");
+    const message = formData.get("message");
+
+    console.log({
+      name,
+      email,
+      phone,
+      message,
+    });
+
+    event.currentTarget.reset();
+    setIsSubmitted(true);
+  }
+
   return (
     <main>
       {/* Page Hero */}
@@ -67,7 +93,16 @@ export default function ContactPage() {
                 Send Us a Message
               </h2>
 
-              <form className="mt-6 space-y-5">
+              {isSubmitted && (
+                <p className="mt-4 rounded-lg bg-primary/10 px-4 py-3 text-sm text-primary">
+                  Thank you! Your message has been received.
+                </p>
+              )}
+
+              <form
+                className="mt-6 space-y-5"
+                onSubmit={handleSubmit}
+              >
                 <div>
                   <label
                     htmlFor="name"
@@ -80,6 +115,7 @@ export default function ContactPage() {
                     id="name"
                     name="name"
                     type="text"
+                    required
                     placeholder="Your name"
                     className="mt-2 w-full rounded-lg border border-border bg-background px-4 py-3 text-sm outline-none transition focus:border-primary"
                   />
@@ -97,6 +133,7 @@ export default function ContactPage() {
                     id="email"
                     name="email"
                     type="email"
+                    required
                     placeholder="you@example.com"
                     className="mt-2 w-full rounded-lg border border-border bg-background px-4 py-3 text-sm outline-none transition focus:border-primary"
                   />
@@ -130,6 +167,7 @@ export default function ContactPage() {
                   <textarea
                     id="message"
                     name="message"
+                    required
                     rows={5}
                     placeholder="Tell us about your solar requirements..."
                     className="mt-2 w-full resize-none rounded-lg border border-border bg-background px-4 py-3 text-sm outline-none transition focus:border-primary"
