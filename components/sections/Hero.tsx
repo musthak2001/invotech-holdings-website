@@ -7,28 +7,30 @@ export default function Hero() {
       <Container>
         <div className="mx-auto max-w-4xl text-center">
           <p className="text-sm font-medium uppercase tracking-wide text-primary">
-            InvoTech Holdings
+            Solar Energy Solutions
           </p>
 
           <h1 className="mt-4 text-4xl font-bold tracking-tight text-text sm:text-5xl lg:text-6xl">
-            Technology that moves businesses forward.
+            Power Your Future with Clean Solar Energy
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-muted sm:text-lg">
-            We build reliable software and technology solutions for modern
-            businesses.
+            Reliable and sustainable solar solutions for homes and businesses,
+            helping you reduce energy costs and build a cleaner future.
           </p>
 
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
             <Button href="/services">
-  Explore Services
-</Button>
+              Explore Our Solutions
+            </Button>
+
             <Button href="/contact" variant="outline">
-  Contact Us
-</Button>
+              Get a Quote
+            </Button>
           </div>
         </div>
       </Container>
     </section>
   );
 }
+
