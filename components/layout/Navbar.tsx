@@ -23,6 +23,7 @@ export default function Navbar() {
             <NavLink href="/about">About</NavLink>
             <NavLink href="/services">Services</NavLink>
             <NavLink href="/products">Products</NavLink>
+            <NavLink href="/projects">Projects</NavLink>
             <NavLink href="/contact">Contact</NavLink>
         </div>
 
@@ -52,6 +53,9 @@ export default function Navbar() {
               </Link>
               <Link href="/products" onClick={() => setIsMenuOpen(false)}>
                 Products
+              </Link>
+              <Link href="/projects" onClick={() => setIsMenuOpen(false)}>
+               Projects
               </Link>
               <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
                 Contact
