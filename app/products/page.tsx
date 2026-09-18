@@ -1,6 +1,12 @@
 import Container from "@/components/layout/Container";
 import { products } from "@/data/products";
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Solar Products",
+  description:
+    "Explore solar panels, inverters, battery storage, and complete solar system solutions from InvoTech Holdings.",
+};
 
 export default function ProductsPage() {
   return (

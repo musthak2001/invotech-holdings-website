@@ -1,5 +1,12 @@
 import Container from "@/components/layout/Container";
 import { services } from "@/data/services";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Solar Services",
+  description:
+    "Explore solar installation, consultation, maintenance, and after-sales support from InvoTech Holdings.",
+};
 
 export default function ServicesPage() {
   return (

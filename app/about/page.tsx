@@ -1,5 +1,12 @@
 
 import Container from "@/components/layout/Container";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us",
+  description:
+    "Learn more about InvoTech Holdings and our approach to solar energy solutions.",
+};
 
 export default function AboutPage() {
   return (

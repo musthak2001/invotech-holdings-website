@@ -10,8 +10,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "InvoTech Holdings",
-  description: "InvoTech Holdings company website",
+  title: {
+    default: "InvoTech Holdings | Solar Energy Solutions",
+    template: "%s | InvoTech Holdings",
+  },
+  description:
+    "InvoTech Holdings provides solar energy solutions for homes and businesses.",
 };
 
 export default function RootLayout({
