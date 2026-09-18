@@ -1,4 +1,11 @@
 import Container from "@/components/layout/Container";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Solar Projects",
+  description:
+    "Explore solar projects and energy solutions delivered by InvoTech Holdings for homes and businesses.",
+};
 
 const projects = [
   {
