@@ -32,7 +32,7 @@ export default function WhyChooseUs() {
             <img
               className="w-full h-full object-cover"
               alt="Female electrical engineer conducting solar telemetry diagnostics"
-              src="https://lh3.googleusercontent.com/aida/AEtjO1WZL0oHk_H8n8yFBaDKxH0bqM3td7EqAzLJ9o7yaQ40l8eOOB7J_5v61y8YtyXCUlg82gbKA4d2cmc6ATRYUTDm-NusIMWNy3YZ-ffeFKIYhyoYSa8K8cLR_mZ_1IbcTKKfmDYSrGNdYP-NpSZFRfI0ho7FkbXJXYnmqG-hOBA598EnZkaaaOVVLNSIVdteeSjflZ6JIm8jLjLXDat8_KZA7DEufZ_2JpQRdEhbqhOvqXANr_hwtldh9XdY"
+              src="https://static.vecteezy.com/system/resources/previews/049/099/569/large_2x/view-from-behind-engineer-technician-wearing-a-safety-helmet-long-sleeve-shirt-conducting-and-inspection-at-solar-cell-farm-warm-light-at-sunset-time-free-photo.jpg"
             />
             <div className="absolute bottom-4 left-4 right-4 bg-surface-container-lowest/90 backdrop-blur-md p-4 rounded-xl shadow-md">
               <div className="flex items-center justify-between">
