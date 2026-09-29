@@ -1,68 +1,98 @@
 
-import Container from "@/components/layout/Container";
-
-const benefits = [
-  {
-    title: "Quality Solutions",
-    description:
-      "We focus on providing solar solutions designed around your energy requirements.",
-  },
-  {
-    title: "Reliable Performance",
-    description:
-      "Our solutions are designed to provide dependable solar power for everyday energy needs.",
-  },
-  {
-    title: "Energy Savings",
-    description:
-      "Solar energy can help reduce dependence on conventional electricity and lower long-term energy costs.",
-  },
-  {
-    title: "Clean Energy",
-    description:
-      "Switch to a cleaner energy source and take a step toward a more sustainable future.",
-  },
-];
-
 export default function WhyChooseUs() {
+  const points = [
+    {
+      title: "Local Engineering Expertise",
+      description:
+        "Direct local engineering oversight ensuring strict compliance with Sri Lankan utility regulations and grid codes.",
+    },
+    {
+      title: "Precision Yield Simulation & Sizing",
+      description:
+        "Advanced 3D shading simulations, drone thermal mapping, and electrical load curve analysis for optimized LCOE.",
+    },
+    {
+      title: "Tier-1 Hardware Standards",
+      description:
+        "Procurement exclusively from tier-1 globally recognized component manufacturers with verifiable long-term warranties.",
+    },
+    {
+      title: "Prompt SLA & Performance Auditing",
+      description:
+        "Guaranteed SLA response times and ongoing performance telemetry to preserve capital investment yields.",
+    },
+  ];
+
   return (
-    <section className="bg-background py-20 sm:py-24">
-      <Container>
-        <div className="grid items-center gap-12 lg:grid-cols-2">
-          <div>
-            <p className="text-sm font-medium uppercase tracking-wide text-primary">
-              Why Choose Us
-            </p>
-
-            <h2 className="mt-3 text-3xl font-bold tracking-tight text-text sm:text-4xl">
-              Reliable Solar Energy for a Brighter Future
-            </h2>
-
-            <p className="mt-5 max-w-xl text-base leading-7 text-muted sm:text-lg">
-              We help homes and businesses move toward cleaner and more
-              efficient energy with practical solar solutions designed around
-              their needs.
-            </p>
+    <section className="w-full bg-surface-container-lowest py-20">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        {/* Left Column Image & Card */}
+        <div className="lg:col-span-6">
+          <div className="relative rounded-2xl overflow-hidden shadow-lg bg-surface-container aspect-[4/3]">
+            <img
+              className="w-full h-full object-cover"
+              alt="Female electrical engineer conducting solar telemetry diagnostics"
+              src="https://lh3.googleusercontent.com/aida/AEtjO1WZL0oHk_H8n8yFBaDKxH0bqM3td7EqAzLJ9o7yaQ40l8eOOB7J_5v61y8YtyXCUlg82gbKA4d2cmc6ATRYUTDm-NusIMWNy3YZ-ffeFKIYhyoYSa8K8cLR_mZ_1IbcTKKfmDYSrGNdYP-NpSZFRfI0ho7FkbXJXYnmqG-hOBA598EnZkaaaOVVLNSIVdteeSjflZ6JIm8jLjLXDat8_KZA7DEufZ_2JpQRdEhbqhOvqXANr_hwtldh9XdY"
+            />
+            <div className="absolute bottom-4 left-4 right-4 bg-surface-container-lowest/90 backdrop-blur-md p-4 rounded-xl shadow-md">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <span className="material-symbols-outlined text-primary text-[24px]">
+                    verified
+                  </span>
+                  <div>
+                    <div className="text-sm text-on-surface font-bold">
+                      Field-Proven Standards
+                    </div>
+                    <div className="text-xs text-on-surface-variant">
+                      Continuous Quality Diagnostics
+                    </div>
+                  </div>
+                </div>
+                <span className="text-xs font-semibold px-2.5 py-1 bg-primary/10 text-primary rounded-full">
+                  Active Monitoring
+                </span>
+              </div>
+            </div>
           </div>
+        </div>
 
-          <div className="grid gap-6 sm:grid-cols-2">
-            {benefits.map((benefit) => (
+        {/* Right Column Copy */}
+        <div className="lg:col-span-6 flex flex-col items-start">
+          <span className="text-xs uppercase tracking-wider text-primary font-semibold mb-2">
+            Technical Rigor
+          </span>
+          <h2 className="font-plus-jakarta text-3xl sm:text-4xl text-on-surface font-bold">
+            Why Choose InvoTech?
+          </h2>
+          <p className="text-base text-on-surface-variant mt-3 mb-8">
+            Engineering-led renewable transition built on trust, precision, and technical transparency.
+          </p>
+
+          <div className="space-y-4 w-full">
+            {points.map((point) => (
               <div
-                key={benefit.title}
-                className="rounded-xl border border-border bg-background-light p-6"
+                key={point.title}
+                className="flex items-start gap-4 p-4 rounded-xl bg-surface-container-low shadow-sm"
               >
-                <h3 className="text-lg font-semibold text-text">
-                  {benefit.title}
-                </h3>
-
-                <p className="mt-3 text-sm leading-6 text-muted">
-                  {benefit.description}
-                </p>
+                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+                  <span className="material-symbols-outlined text-[18px]">
+                    check
+                  </span>
+                </div>
+                <div>
+                  <h3 className="text-sm font-semibold text-on-surface">
+                    {point.title}
+                  </h3>
+                  <p className="text-xs text-on-surface-variant mt-1 leading-relaxed">
+                    {point.description}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
         </div>
-      </Container>
+      </div>
     </section>
   );
 }
