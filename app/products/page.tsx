@@ -3,9 +3,9 @@ import { products } from "@/data/products";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Solar Products",
+  title: "Products",
   description:
-    "Explore solar panels, inverters, battery storage, and complete solar system solutions from InvoTech Holdings.",
+    "Explore technology, energy, infrastructure, and retail products and solutions from InvoTech Holdings.",
 };
 
 export default function ProductsPage() {
@@ -20,12 +20,13 @@ export default function ProductsPage() {
             </p>
 
             <h1 className="mt-4 text-4xl font-bold tracking-tight text-text sm:text-5xl lg:text-6xl">
-              Solar Products for Your Energy Needs
+              Technology Products for a Smarter Future
             </h1>
 
             <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-muted sm:text-lg">
-              Explore the essential products and solutions used to build
-              reliable solar energy systems for homes and businesses.
+              Explore carefully selected products and technology solutions
+              supporting renewable energy, infrastructure, climate technology,
+              and modern business environments.
             </p>
           </div>
         </Container>
