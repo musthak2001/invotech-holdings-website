@@ -21,6 +21,9 @@ export const metadata: Metadata = {
     default: "InvoTech Holdings | Smart Energy & Engineering Solutions",
     template: "%s | InvoTech Holdings",
   },
+  verification: {
+    google: "ySXh2x1PKCeyzDtZhIRSiPJ87YnQ0hpxJJPF1G5sz18",
+  },
   description:
     "InvoTech Holdings provides solar energy solutions, EPC engineering, smart infrastructure, and energy management for Sri Lanka and beyond.",
 };
@@ -38,11 +41,13 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap"
         />
       </head>
-      <body className={`${inter.variable} ${plusJakartaSans.variable} bg-surface font-body-md text-on-surface antialiased`}>
+      <body
+        className={`${inter.variable} ${plusJakartaSans.variable} bg-surface font-body-md text-on-surface antialiased`}
+      >
         <Navbar />
         {children}
         <Footer />
       </body>
     </html>
   );
-}
+}
